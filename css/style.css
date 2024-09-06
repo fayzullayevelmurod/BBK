@@ -4,6 +4,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Stapel";
+  src: url("../fonts/Stapel-SemiExpandedMedium.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -127,4 +133,42 @@ label {
   margin: 0;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.footer {
+  background-color: #003064;
+}
+.footer_bottom {
+  padding: 52px 0;
+}
+.footer_bottom span {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 21.86px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 991px) {
+  .footer_bottom span {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+}
+.footer_bottom img {
+  width: 50px;
+  height: 50px;
+}
+@media screen and (max-width: 991px) {
+  .footer .row {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+.footer_social {
+  gap: 20px;
+  justify-content: end;
+}
+@media screen and (max-width: 991px) {
+  .footer_social {
+    justify-content: start;
+  }
 }/*# sourceMappingURL=style.css.map */

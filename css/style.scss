@@ -17,6 +17,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Stapel";
+    src: url("../fonts/Stapel-SemiExpandedMedium.ttf") format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 // fonts
 $font-manrope: "Manrope", sans-serif;
@@ -172,7 +178,6 @@ ul, ol, dl {
     margin: 0;
 }
 
-
 h1,
 h2,
 h3,
@@ -187,5 +192,48 @@ label {
     padding-bottom: 0;
 }
 // bootstrap
+
+// footer
+.footer {
+    background-color: $color-main-blue;
+
+    &_bottom {
+        padding: 52px 0;
+
+        span {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 21.86px;
+            color: $color-white;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22.4px;
+            }
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .row {
+        @include media(991) {
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+    }
+
+    &_social {
+        gap: 20px;
+        justify-content: end;
+
+        @include media(991) {
+            justify-content: start;
+        }
+    }
+}
+// footer
 
 
