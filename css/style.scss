@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Stapel";
+    src: url("../fonts/Stapel-Medium.ttf") format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Stapel";
+    src: url("../fonts/Stapel-Light.ttf") format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
 @mixin media($value) {
     @if ($value < 0) {
         @media screen and (min-width: calc($value * (-1)) + 'px') {
@@ -9,19 +23,6 @@
             @content;
         }
     }
-}
-
-@font-face {
-    font-family: "Stapel";
-    src: url("../fonts/stapel-semi-expanded-medium.otf") format('otf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Stapel";
-    src: url("../fonts/Stapel-SemiExpandedMedium.ttf") format('ttf');
-    font-weight: normal;
-    font-style: normal;
 }
 
 // fonts
@@ -185,7 +186,8 @@ h4,
 h5,
 h6,
 p,
-label {
+label,
+address {
     padding: 0;
     margin: 0;
     margin-bottom: 0;
@@ -196,6 +198,169 @@ label {
 // footer
 .footer {
     background-color: $color-main-blue;
+
+    &_top {
+        border-bottom: 1px solid $color-white;
+        padding: 100px 0 60px;
+
+        @include media(991) {
+            padding: 60px 0;
+        }
+
+        .main_container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+
+            @include media(991) {
+                gap: 20px;
+            }
+
+            @include media(991) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    h6 {
+        width: 100%;
+        @include flex-center();
+        justify-content: space-between;
+        font-family: $font-stapel;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28.8px;
+        color: $color-white;
+
+        svg {
+            display: none;
+
+            @include media(991) {
+                display: flex;
+            }
+        }
+
+        @include media(991) {
+            font-size: 18px;
+            line-height: 25.2px;
+        }
+    }
+
+    &_link {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s ease, opacity 0.3s ease;
+
+        @include media(991) {
+            overflow: hidden;
+            height: 0;
+            @include transition();
+        }
+    }
+
+    &_link.active {
+        @include media(991) {
+            overflow: hidden;
+            height:max-content;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 40px;
+        @include transition();
+
+        @include media(991) {
+            padding: 20px 0;
+        }
+
+        a,
+        address {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            color: $color-white;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22.4px;
+            }
+        }
+    }
+
+    &_block_title {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+
+        svg {
+            transition: transform 0.3s ease;
+        }
+    }
+
+    .contact_in {
+        padding: 20px 0 0 0;
+    }
+
+    &_block_one {
+        @include media(991) {
+            order: 1;
+        }
+    }
+
+    &_block_two {
+        @include media(991) {
+            order: 2;
+        }
+    }
+
+    &_block_three {
+        @include media(991) {
+            order: 3;
+        }
+    }
+
+    &_block_four {
+        @include media(991) {
+            order: 4;
+        }
+    }
+
+    &_block_five {
+        @include media(991) {
+            order: 5;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .footer_link {
+            display: none;
+        }
+
+        .footer_link.active {
+            display: block;
+            height: auto;
+        }
+
+        .footer_block_title svg {
+            display: flex;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .footer_link {
+            display: block;
+            height: auto;
+        }
+
+        .footer_block_title svg {
+            display: none;
+        }
+    }
 
     &_bottom {
         padding: 52px 0;
