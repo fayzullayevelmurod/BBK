@@ -34,6 +34,7 @@ $font-stapel: "Stapel", sans-serif;
 $color-main-blue: #003064;
 $color-white: #FFFFFF;
 $color-black: #222222;
+$color-grey: #999999;
 // colors
 
 // mixin
@@ -194,6 +195,96 @@ address {
     padding-bottom: 0;
 }
 // bootstrap
+
+// header
+.header {
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &_top {
+        padding: 25px 0;
+    }
+
+    &_bottom {
+        background-color: $color-main-blue;
+
+        ul {
+            display: flex;
+            align-items: stretch;
+        }
+
+        li {
+            border-right: .5px solid $color-grey;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        a,
+        button {
+            text-align: center;
+            @include flex-full-center();
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 25.6px;
+            color: $color-white;
+            min-width: 135px;
+            padding: 21px 25px;
+        }
+    }
+
+    &_logo {
+        padding-right: 16px;
+        border-right: .2px solid $color-grey;
+    }
+
+    &_location {
+        @include flex-center();
+        gap: 30px;
+
+        li {
+            @include flex-center();
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 25.6px;
+            color: $color-black;
+        }
+    }
+
+    &_contact {
+
+        li {
+            @include flex-center();
+            gap: 8px;
+        }
+
+        a {
+            @include flex-center();
+            gap: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.05em;
+            color: $color-black;
+        }
+
+        span {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 19.2px;
+            letter-spacing: 0.05em;
+            color: $color-grey;
+        }
+    }
+}
+// header
 
 // footer
 .footer {
