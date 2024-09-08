@@ -433,18 +433,16 @@ address {
         }
     }
 
-    /* Scroll bar kengligini kichik qilish va rang berish */
     .header_menu {
-        scrollbar-width: thin; /* Kichik scroll bar */
-        scrollbar-color: #888 #f1f1f1; /* Tugma rangi va track rangi */
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
     }
-
 
     .catalog_in {
         margin-top: 70px;
         display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
         padding-bottom: 40px;
         border-bottom: .5px solid $color-grey;
 
@@ -454,6 +452,10 @@ address {
             gap: 10px;
             padding: 10px;
             border-radius: 5px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 19.6px;
+            color: $color-black;
         }
 
         .title_block.active {
@@ -472,6 +474,10 @@ address {
             display: flex;
             align-items: center;
             gap: 5px;
+        }
+
+        &_block {
+            padding: 10px;
         }
 
         a {
