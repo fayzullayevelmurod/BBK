@@ -1,3 +1,31 @@
+// header_menu
+let header_burger = document.querySelector('.header_burger');
+let header_menu_bg = document.querySelector('.header_menu_bg');
+let header_menu_close = document.querySelector('.header_menu_close');
+let catalog_btn = document.querySelector('.catalog_btn');
+let catalog_close = document.querySelector('.catalog_close');
+let catalog_in = document.querySelector('.catalog_in');
+let header_menu_link = document.querySelector('.header_menu_link');
+
+header_burger.addEventListener('click', () => {
+  header_menu_bg.classList.add('active')
+})
+
+header_menu_close.addEventListener('click', () => {
+  header_menu_bg.classList.remove('active')
+})
+
+catalog_btn.addEventListener('click', () => {
+  header_menu_link.classList.add('active');
+  catalog_in.classList.add('active');
+})
+
+catalog_close.addEventListener('click', () => {
+  header_menu_link.classList.remove('active');
+  catalog_in.classList.remove('active');
+})
+// header_menu
+
 
 // footer
 document.addEventListener('DOMContentLoaded', () => {
@@ -63,5 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', handleResize);
   handleResize();
 });
-
 // footer
