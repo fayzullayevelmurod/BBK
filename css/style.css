@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Stapel";
-  src: url("../fonts/Stapel-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Stapel";
-  src: url("../fonts/Stapel-Light.ttf") format("ttf");
-  font-weight: 300;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
@@ -446,6 +434,57 @@ address {
 
 .header_menu_bg.active {
   left: 0;
+}
+
+.home .home_Swiper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 98px;
+}
+.home .home_Swiper .swiper-slide {
+  position: relative;
+  padding: 160px 0;
+}
+.home .home_Swiper .slider_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home h1 {
+  font-family: "Stapel", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 70px;
+  color: #FFFFFF;
+  max-width: 652px;
+  text-transform: uppercase;
+}
+.home p {
+  max-width: 652px;
+  margin: 40px 0 60px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+.home_content {
+  padding-left: 118px;
+}
+.home .home_slider_btn {
+  position: absolute;
+  z-index: 2;
+}
+.home .home-button-prev {
+  left: 5%;
+}
+.home .home-button-next {
+  right: 5%;
 }
 
 .save_technology_top {

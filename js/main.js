@@ -26,6 +26,15 @@ catalog_close.addEventListener('click', () => {
 })
 // header_menu
 
+// home_slider
+let home_slider = new Swiper(".home_Swiper", {
+  navigation: {
+    nextEl: ".home-button-next",
+    prevEl: ".home-button-prev",
+  },
+});
+// home_slider
+
 
 // footer
 document.addEventListener('DOMContentLoaded', () => {

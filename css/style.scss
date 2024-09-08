@@ -1,16 +1,16 @@
-@font-face {
-    font-family: "Stapel";
-    src: url("../fonts/Stapel-Medium.ttf") format('ttf');
-    font-weight: 500;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: "Stapel";
+//     src: url("../fonts/Stapel-Medium.ttf") format('ttf');
+//     font-weight: 500;
+//     font-style: normal;
+// }
 
-@font-face {
-    font-family: "Stapel";
-    src: url("../fonts/Stapel-Light.ttf") format('ttf');
-    font-weight: 300;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: "Stapel";
+//     src: url("../fonts/Stapel-Light.ttf") format('ttf');
+//     font-weight: 300;
+//     font-style: normal;
+// }
 
 @mixin media($value) {
     @if ($value < 0) {
@@ -535,6 +535,67 @@ address {
     left: 0;
 }
 // header_menu
+
+// home
+.home {
+    .home_Swiper {
+        @include flex-center();
+        justify-content: space-between;
+        gap: 98px;
+
+        .swiper-slide {
+            position: relative;
+            padding: 160px 0;
+        }
+
+        .slider_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+    }
+
+    h1 {
+        font-family: $font-stapel;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 70px;
+        color: $color-white;
+        max-width: 652px;
+        text-transform: uppercase;
+    }
+
+    p {
+        max-width: 652px;
+        margin: 40px 0 60px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        color: $color-white;
+    }
+
+    &_content {
+        padding-left: 118px;
+    }
+
+    .home_slider_btn {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .home-button-prev {
+        left: 5%;
+    }
+
+    .home-button-next {
+        right: 5%;
+    }
+}
+// home
 
 // save_technology
 .save_technology {
