@@ -163,7 +163,14 @@ address {
         background-color: $color-white;
         padding: 20px;
         color: $color-main-blue;
+
+        @include media(991) {
+            font-size: 14px;
+            line-height: 19.6px;
+            padding: 15.6px 24px;
+        }
     }
+
     &_blue {
         font-size: 16px;
         font-weight: 700;
@@ -175,6 +182,12 @@ address {
         background-color: $color-main-blue;
         color: $color-white;
         padding: 20px;
+
+        @include media(991) {
+            font-size: 14px;
+            line-height: 19.6px;
+            padding: 15.6px 24px;
+        }
     }
 }
 
@@ -227,6 +240,13 @@ address {
 
 // header
 .header {
+
+    @include media(991) {
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background-color: $color-white;
+    }
 
     .main_container {
         @include flex-center();
@@ -353,6 +373,7 @@ address {
 // header_menu
 .header_menu_bg {
     position: fixed;
+    z-index: 9;
     top: 0;
     left: -100%;
     width: 100%;
@@ -546,6 +567,10 @@ address {
         .swiper-slide {
             position: relative;
             padding: 160px 0;
+
+            @include media(991) {
+                padding: 276px 0 160px;
+            }
         }
 
         .slider_img {
@@ -567,6 +592,12 @@ address {
         color: $color-white;
         max-width: 652px;
         text-transform: uppercase;
+
+        @include media(991) {
+            font-size: 25px;
+            line-height: 35px;
+            max-width: 360px;
+        }
     }
 
     p {
@@ -576,26 +607,294 @@ address {
         font-weight: 400;
         line-height: 32px;
         color: $color-white;
+
+        @include media(991) {
+            font-size: 14px;
+            line-height: 22px;
+            margin: 20px 0 60px;
+        }
     }
 
     &_content {
         padding-left: 118px;
+
+        @include media(991) {
+            padding-left: 0;
+        }
     }
 
     .home_slider_btn {
         position: absolute;
         z-index: 2;
+        width: 25px;
+        height: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .desktop_slider_icon {
+        @include media(991) {
+            display: none;
+        }
     }
 
     .home-button-prev {
         left: 5%;
+
+        @include media(991) {
+            right: 70px;
+        }
     }
 
     .home-button-next {
         right: 5%;
+
+        @include media(991) {
+            right: 15px;
+        }
+    }
+
+    .media_slider_btn {
+        position: absolute;
+        bottom: 183px;
+        right: 15px;
+        display: none;
+        align-items: center;
+        gap: 40px;
+
+        @include media(991) {
+            display: flex;
+        }
+
+        .home_slider_btn {
+            width: 15px;
+            height: 30px;
+            position: static;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 // home
+
+// category_product
+.category_product {
+    margin: 100px 0;
+
+    @include media(991) {
+        margin: 80px 0;
+    }
+
+    &_title {
+        margin-bottom: 80px;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            color: $color-grey;
+            max-width: 660px;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22.4px;
+                max-width: 100%;
+            }
+        }
+
+        @include media(991) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .main_title {
+        margin-bottom: 30px;
+    }
+
+    &_top {
+        margin-bottom: 20px;
+
+        @include media(991) {
+            gap: 20px;
+        }
+
+        .category_product_card {
+            position: relative;
+
+            h6 {
+                position: absolute;
+                z-index: 2;
+                left: 60px;
+                top: 60px;
+                right: 20px;
+                font-family: $font-stapel;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 42px;
+                color: $color-white;
+                text-transform: uppercase;
+
+                @include media(991) {
+                    font-size: 20px;
+                    line-height: 28px;
+                    text-align: center;
+                    left: 50%;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    &_bottom {
+
+        @include media(991) {
+            gap: 20px;
+        }
+
+        .category_product_card {
+            position: relative;
+
+            h6 {
+                position: absolute;
+                z-index: 2;
+                text-align: center;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-family: $font-stapel;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 42px;
+                color: $color-white;
+                text-transform: uppercase;
+
+                @include media(991) {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    .card-inner {
+        position: relative;
+        width: inherit;
+        height: 23.75rem;
+        border-radius: 5px;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+
+        @include media(991) {
+            height: 17.5rem;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border-radius: 1.25rem;
+            overflow: hidden;
+
+            .imgBox {
+                position: absolute;
+                inset: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                bottom: -0.375rem;
+                right: -0.375rem;
+                width: 100px;
+                height: 70px;
+                background: var(--clr);
+                border-top-left-radius: 5px;
+
+                &:hover {
+                    a {
+                        background-color: $color-white;
+                        border: 1px solid $color-main-blue;
+
+                        svg {
+                            path {
+                                fill: $color-main-blue;
+                            }
+                        }
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    bottom: 0.375rem;
+                    left: -1.25rem;
+                    background: transparent;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    border-bottom-right-radius: 5px;
+                    box-shadow: 0.313rem 0.313rem 0 0.313rem #fff;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: -1.25rem;
+                    right: 0.375rem;
+                    background: transparent;
+                    width: 20px;
+                    height: 20px;
+                    border-bottom-right-radius: 5px;
+                    box-shadow: 5px 5px 0 0 var(--clr);
+                }
+
+                .iconBox {
+                    width: 88px;
+                    height: 58px;
+                    position: absolute;
+                    @include flex-full-center();
+                    border-radius: 5px;
+                    background-color: $color-main-blue;
+                    color: $color-white;
+                    border: 1px solid transparent;
+                    @include transition();
+
+                    @include media(991) {
+                        width: 85px;
+                        height: 56px;
+                    }
+
+                    svg {
+                        path {
+                            @include transition();
+                        }
+
+                        @include media(991) {
+                            width: 30px;
+                        }
+                    }
+
+                    @include media(991) {
+                        font-size: 14px;
+                        line-height: 19.6px;
+                        padding: 15.6px 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+// category_product
 
 // save_technology
 .save_technology {
