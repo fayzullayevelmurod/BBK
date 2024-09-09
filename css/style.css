@@ -1290,6 +1290,68 @@ address {
   }
 }
 
+.certificates_title {
+  margin-bottom: 40px;
+}
+.certificates_title h3 {
+  font-family: "Stapel", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+  color: #222222;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .certificates_title h3 {
+    font-size: 18px;
+    line-height: 25.2px;
+    margin-bottom: 20px;
+  }
+}
+.certificates_title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: #555555;
+}
+@media screen and (max-width: 991px) {
+  .certificates_title p {
+    font-size: 14px;
+    line-height: 22.4px;
+  }
+}
+.certificates_cards {
+  margin-bottom: 40px;
+  gap: 20px 0;
+}
+.certificates_card {
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #F4F4F4;
+  padding: 31px 36px;
+  transition: 0.3s ease;
+}
+.certificates_card:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid transparent;
+}
+.certificates_card img {
+  width: 130px;
+  height: 180px;
+}
+.certificates_card h6 {
+  margin: 15px 0 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+.certificates_card span {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #999999;
+}
+
 .footer {
   background-color: #003064;
 }

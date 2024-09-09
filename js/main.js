@@ -35,6 +35,20 @@ let home_slider = new Swiper(".home_Swiper", {
 });
 // home_slider
 
+// lightgallery
+document.addEventListener('DOMContentLoaded', function() {
+  lightGallery(document.getElementById('lightgallery'), {
+    plugins: [lgZoom],
+    zoom: true,
+    mobileSettings: {
+      controls: true, // Mobileda boshqaruv elementlari
+      download: false,
+      zoom: true // Zoom funksiyasini yoqish
+    }
+  });
+});
+// lightgallery
+
 
 // footer
 document.addEventListener('DOMContentLoaded', () => {
