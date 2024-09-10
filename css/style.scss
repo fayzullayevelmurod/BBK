@@ -1038,9 +1038,19 @@ address {
         margin: 80px 0;
     }
 
-    .main_title {
-        font-size: 30px;
-        line-height: 42px;
+    &_in {
+        gap: 40px 0;
+
+        .main_title {
+            font-size: 30px;
+            line-height: 42px;
+            margin-bottom: 40px;
+
+            @include media(991) {
+                font-size: 20px;
+                line-height: 28px;
+            }
+        }
     }
 
     &_left {
@@ -1050,6 +1060,12 @@ address {
             line-height: 22.4px;
             color: $color-dark-grey;
             margin-bottom: 15px;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 19.2px;
+                margin-bottom: 5px;
+            }
         }
 
         a,
@@ -1059,12 +1075,21 @@ address {
             font-weight: 500;
             line-height: 25.6px;
             color: $color-black;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
 
         &_in {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
+
+            @include media(991) {
+                gap: 20px;
+            }
         }
 
         p {
@@ -1072,14 +1097,25 @@ address {
             font-weight: 400;
             line-height: 25.6px;
             color: $color-grey;
-            margin-top: 40px;
+            margin-top: 30px;
+
+            @include media(991) {
+                margin-top: 20px;
+                font-size: 14px;
+                line-height: 22.4px;
+            }
         }
     }
 
     &_social {
-        margin-top: 40px;
+        margin-top: 30px;
         @include flex-center();
         gap: 20px;
+
+        @include media(991) {
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
     }
 
     .card-inner {
@@ -1089,12 +1125,16 @@ address {
         border-radius: 5px;
         border-bottom-right-radius: 0;
 
-        // @include media(991) {
-        //     height: 17.5rem;
-        // }
+        @include media(991) {
+            height: 20.125rem;
+        }
 
         iframe {
             height: 527px;
+
+            @include media(991) {
+                height: 322px;
+            }
         }
 
         .map-widget-layout-view__bottom-panel {
@@ -1123,7 +1163,7 @@ address {
                 position: absolute;
                 bottom: -0.375rem;
                 left: -0.375rem;
-                width: 280px;
+                width: 300px;
                 height: 70px;
                 background: var(--clr);
                 border-top-left-radius: 5px;
@@ -1133,10 +1173,23 @@ address {
                     height: 60px;
                 }
 
+                span {
+                    @include transition();
+                    white-space: nowrap;
+                }
+
+                svg {
+                    flex-shrink: 0;
+                }
+
                 &:hover {
                     a {
                         background-color: $color-white;
                         border: 1px solid $color-main-blue;
+
+                        span {
+                            color: $color-main-blue;
+                        }
 
                         svg {
                             path {
@@ -1171,7 +1224,7 @@ address {
                 }
 
                 .iconBox {
-                    width: 270px;
+                    width: 285px;
                     height: 58px;
                     position: absolute;
                     @include flex-full-center();
@@ -1181,6 +1234,7 @@ address {
                     gap: 20px;
                     border: 1px solid transparent;
                     @include transition();
+                    padding: 20px;
 
                     @include media(991) {
                         width: 245px;
@@ -1197,14 +1251,24 @@ address {
                         }
                     }
 
+                }
+
+                .btn_blue {
                     @include media(991) {
                         font-size: 14px;
                         line-height: 19.6px;
-                        padding: 10px;
                     }
                 }
             }
         }
+    }
+}
+
+.contact_page {
+    margin: 0 0 100px 0;
+
+    @include media(991) {
+        margin: 0 0 80px 0;
     }
 }
 // contact
