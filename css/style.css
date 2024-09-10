@@ -168,6 +168,11 @@ address {
   padding-bottom: 0;
 }
 
+@media (max-width: 991px) {
+  .lg-zoom-in, .lg-zoom-out {
+    display: block !important;
+  }
+}
 @media screen and (max-width: 991px) {
   .header {
     position: fixed;
@@ -1350,6 +1355,175 @@ address {
   line-height: 22px;
   font-weight: 400;
   color: #999999;
+}
+
+.technical_information_left .nav {
+  width: 100%;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_left .nav {
+    gap: 20px;
+    flex-direction: row !important;
+    margin-bottom: 40px;
+  }
+}
+.technical_information_left .nav-link {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  color: #222222;
+  padding: 10px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_left .nav-link {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.technical_information_left .nav-link.active {
+  background-color: #F4F4F4;
+  color: #222222;
+}
+.technical_information_right {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_right {
+    margin-bottom: 80px;
+  }
+}
+.technical_information_right h3 {
+  font-family: "Stapel", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+  margin-bottom: 40px;
+  color: #222222;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_right h3 {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+}
+.technical_information_right p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: #555555;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_right p {
+    font-size: 14px;
+    line-height: 22.4px;
+    margin-bottom: 20px;
+  }
+}
+.technical_information_right ul {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_right ul {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .technical_information_right ul {
+    margin-bottom: 40px;
+  }
+}
+.technical_information_block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #F8FAFD;
+  padding: 60px 40px;
+  gap: 10px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_block {
+    padding: 40px 15px;
+    gap: 25px;
+    border-radius: 10px;
+  }
+}
+.technical_information_block_left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_block_left {
+    gap: 15px;
+  }
+}
+.technical_information_block_left img {
+  width: 55px;
+  height: 68px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_block_left img {
+    width: 39px;
+    height: 48px;
+  }
+}
+.technical_information_block_left span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #999999;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_block_left span {
+    font-size: 12px;
+    line-height: 26px;
+  }
+}
+.technical_information_block h6 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #222222;
+  margin-bottom: 15px;
+  max-width: 450px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information_block h6 {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+}
+.technical_information .btn_blue {
+  width: 258px;
+}
+@media screen and (max-width: 991px) {
+  .technical_information .btn_blue {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  .technical_information .btn_blue span {
+    display: none;
+  }
+}
+.technical_information .btn_blue span {
+  white-space: nowrap;
+}
+.technical_information .btn_blue svg {
+  flex-shrink: 0;
 }
 
 .footer {
