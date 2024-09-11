@@ -49,6 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // lightgallery
 
+// product_slider
+let product_slider = new Swiper(".productSlider", {
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+// product_slider
+
 
 // footer
 document.addEventListener('DOMContentLoaded', () => {

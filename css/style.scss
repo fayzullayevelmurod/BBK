@@ -1774,6 +1774,90 @@ address {
 }
 // technical_information
 
+// for_designers
+.for_designers {
+    margin-bottom: 100px;
+
+    @include media(991) {
+        margin-bottom: 80px;
+    }
+
+    &_cards {
+        gap: 40px 0;
+
+        @include media(991) {
+            gap: 20px 0;
+        }
+    }
+
+    &_card {
+
+        .productSlider {
+            // height: 233px;
+
+            .swiper-wrapper {
+                height: 100%;
+            }
+
+            .swiper-slide {
+                height: 100%;
+            }
+
+            @include media(991) {
+                // height: 160px;
+            }
+        }
+
+        .swiper-pagination {
+            margin-top: 5px;
+            position: static;
+            @include flex-full-center();
+            gap: 5px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .swiper-pagination-bullet {
+            flex-shrink: 0;
+            background-color: $color-grey;
+            width: 8px;
+            height: 8px;
+            margin: 0 !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $color-black;
+        }
+
+        &_text {
+            padding: 0 15px;
+            margin-top: 20px;
+
+            @include media(991) {
+                padding: 0 10px;
+            }
+
+            h6 {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                color: $color-black;
+                margin-bottom: 20px;
+            }
+
+            .btn_blue {
+                padding: 10px;
+                @include flex-full-center();
+                gap: 10px;
+            }
+        }
+    }
+}
+// for_designers
+
 // footer
 .footer {
     background-color: $color-main-blue;

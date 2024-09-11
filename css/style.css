@@ -1598,6 +1598,74 @@ address {
   flex-shrink: 0;
 }
 
+.for_designers {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 991px) {
+  .for_designers {
+    margin-bottom: 80px;
+  }
+}
+.for_designers_cards {
+  gap: 40px 0;
+}
+@media screen and (max-width: 991px) {
+  .for_designers_cards {
+    gap: 20px 0;
+  }
+}
+.for_designers_card .productSlider .swiper-wrapper {
+  height: 100%;
+}
+.for_designers_card .productSlider .swiper-slide {
+  height: 100%;
+}
+.for_designers_card .swiper-pagination {
+  margin-top: 5px;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.for_designers_card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.for_designers_card .swiper-pagination-bullet {
+  flex-shrink: 0;
+  background-color: #999999;
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+}
+.for_designers_card .swiper-pagination-bullet-active {
+  background-color: #222222;
+}
+.for_designers_card_text {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 991px) {
+  .for_designers_card_text {
+    padding: 0 10px;
+  }
+}
+.for_designers_card_text h6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+.for_designers_card_text .btn_blue {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 .footer {
   background-color: #003064;
 }
