@@ -38,6 +38,7 @@ $color-black: #222222;
 $color-grey: #999999;
 $color-dark-grey: #555555;
 $color-bg-grey: #F4F4F4;
+$color-bg-bbk: #F7F6FB;
 
 // colors
 
@@ -1857,6 +1858,115 @@ address {
     }
 }
 // for_designers
+
+// bbk_product
+.bbk_product {
+    background-color: $color-bg-bbk;
+
+    .main_container {
+        padding: 100px 0;
+        position: relative;
+
+        @include media(991) {
+            padding: 0 0 80px 0;
+        }
+    }
+
+    &_in {
+        flex-direction: column-reverse;
+    }
+
+    &_imgs {
+        img {
+            position: absolute;
+            top: 0;
+            right: -23%;
+            height: 100%;
+            object-fit: cover;
+
+            @include media(1200) {
+                right: -40%;
+            }
+
+            @include media(991) {
+                position: relative;
+                right: -17px;
+            }
+        }
+    }
+
+    &_text {
+        position: relative;
+        z-index: 2;
+
+        @include media(991) {
+            margin-top: 40px;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include media(991) {
+            gap: 40px;
+        }
+    }
+
+    li {
+        max-width: 430px;
+        @include flex-center();
+        gap: 20px;
+
+        img {
+            flex-shrink: 0;
+
+            @include media(991) {
+                width: 47px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 25.6px;
+            letter-spacing: 0.05em;
+            color: $color-grey;
+            @include flex-center();
+            gap: 20px;
+            border-radius: 5px;
+            background-color: $color-white;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22.4px;
+            }
+        }
+    }
+
+    h6 {
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 28px;
+        color: $color-main-blue;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+        @include media(991) {
+            font-size: 16px;
+            line-height: 22.4px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22.4px;
+        color: $color-grey;
+    }
+}
+// bbk_product
 
 // footer
 .footer {
