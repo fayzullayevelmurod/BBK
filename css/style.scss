@@ -2042,7 +2042,9 @@ address {
         }
 
         .download_catalog_content {
-            padding: 40px 20px 60px 20px;
+            @include media(991) {
+                padding: 40px 20px 60px 20px;
+            }
         }
     }
 
@@ -2050,6 +2052,14 @@ address {
         .download_catalog_content {
             margin-left: auto;
             max-width: 500px;
+
+            p {
+                max-width: 281px;
+
+                @include media(991) {
+                    max-width: 100%;
+                }
+            }
 
             @include media(991) {
                 margin-left: 0;
@@ -2106,6 +2116,7 @@ address {
             font-size: 14px;
             line-height: 18px;
             max-width: 220px;
+            height: 50px;
         }
     }
 }
