@@ -26,6 +26,30 @@ catalog_close.addEventListener('click', () => {
 })
 // header_menu
 
+// filter
+let filter_btn = document.querySelector('.filter_btn');
+let filter_bg = document.querySelector('.filter_bg');
+let filter_menu_close = document.querySelector('.filter_menu_close');
+
+filter_btn.addEventListener('click', () => {
+  filter_bg.classList.add('active');
+})
+
+filter_menu_close.addEventListener('click', () => {
+  filter_bg.classList.remove('active');
+})
+
+document.querySelectorAll('.catalog_in_btn').forEach(function(button) {
+  button.addEventListener('click', function() {
+    const content = button.nextElementSibling;
+
+    content.classList.toggle('active');
+    button.classList.toggle('active');
+  });
+});
+
+// filter
+
 // home_slider
 let home_slider = new Swiper(".home_Swiper", {
   navigation: {
@@ -36,17 +60,17 @@ let home_slider = new Swiper(".home_Swiper", {
 // home_slider
 
 // lightgallery
-document.addEventListener('DOMContentLoaded', function() {
-  lightGallery(document.getElementById('lightgallery'), {
-    plugins: [lgZoom],
-    zoom: true,
-    mobileSettings: {
-      controls: true, // Mobileda boshqaruv elementlari
-      download: false,
-      zoom: true // Zoom funksiyasini yoqish
-    }
-  });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   lightGallery(document.getElementById('lightgallery'), {
+//     plugins: [lgZoom],
+//     zoom: true,
+//     mobileSettings: {
+//       controls: true, // Mobileda boshqaruv elementlari
+//       download: false,
+//       zoom: true // Zoom funksiyasini yoqish
+//     }
+//   });
+// });
 // lightgallery
 
 // product_slider
