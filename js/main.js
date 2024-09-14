@@ -26,18 +26,92 @@ catalog_close.addEventListener('click', () => {
 })
 // header_menu
 
+// header_scroll
+const header = document.querySelector(".page-header");
+const headerBottom = document.querySelector(".header_bottom");
+const toggleClass = "is-sticky";
+const menuBtn = document.querySelector(".menu_btn");
+const leftCatalog = document.querySelector(".catalog_absolute_left");
+const rightCatalog = document.querySelector(".catalog_absolute_right");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 1250) {
+    if (currentScroll > 60) {
+      header.classList.add(toggleClass);
+      menuBtn.classList.add('active');
+      leftCatalog.classList.add('active');
+      rightCatalog.classList.add('active');
+    } else {
+      header.classList.remove(toggleClass);
+      menuBtn.classList.remove('active');
+      headerBottom.style.display = "none";
+      leftCatalog.classList.remove('active');
+      rightCatalog.classList.remove('active');
+    }
+  } else {
+    if (currentScroll > 200) {
+      header.classList.add(toggleClass);
+      menuBtn.classList.add('active');
+      leftCatalog.classList.add('active');
+      rightCatalog.classList.add('active');
+    } else {
+      header.classList.remove(toggleClass);
+      menuBtn.classList.remove('active');
+      leftCatalog.classList.remove('active');
+      rightCatalog.classList.remove('active');
+    }
+  }
+});
+
+
+// header_scroll
+
+// menu_btn
+const menuBtnIn = document.querySelector(".menu_btn_in");
+
+menuBtnIn.addEventListener("click", () => {
+  menuBtnIn.classList.toggle("active");
+});
+
+// menu_btn
+
+// catalog_absolute
+let catalogAbsolute = document.querySelector('.catalog_absolute');
+let catalogAbsoluteBtns = document.querySelectorAll('.catalog_absolute_btn');
+
+catalogAbsoluteBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    catalogAbsolute.classList.toggle('active');
+  });
+});
+
+// catalog_absolute
+
 // filter
-let filter_btn = document.querySelector('.filter_btn');
-let filter_bg = document.querySelector('.filter_bg');
-let filter_menu_close = document.querySelector('.filter_menu_close');
+const filterButtons = document.querySelectorAll('.filter_btn');
+const filterBgElements = document.querySelectorAll('.filter_bg');
+const filterMenuCloseButtons = document.querySelectorAll('.filter_menu_close');
 
-filter_btn.addEventListener('click', () => {
-  filter_bg.classList.add('active');
-})
+filterButtons.forEach((filter_btn, index) => {
+  const filter_bg = filterBgElements[index];
+  const filter_menu_close = filterMenuCloseButtons[index];
 
-filter_menu_close.addEventListener('click', () => {
-  filter_bg.classList.remove('active');
-})
+  filter_btn.addEventListener('click', () => {
+    if (filter_bg) {
+      filter_bg.classList.add('active');
+    }
+  });
+
+  filter_menu_close.addEventListener('click', () => {
+    if (filter_bg) {
+      filter_bg.classList.remove('active');
+    }
+  });
+});
+
 
 document.querySelectorAll('.catalog_in_btn').forEach(function(button) {
   button.addEventListener('click', function() {
@@ -52,6 +126,7 @@ document.querySelectorAll('.catalog_in_btn').forEach(function(button) {
 
 // home_slider
 let home_slider = new Swiper(".home_Swiper", {
+  loop: true,
   navigation: {
     nextEl: ".home-button-next",
     prevEl: ".home-button-prev",
