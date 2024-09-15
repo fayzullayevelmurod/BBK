@@ -26,6 +26,37 @@ catalog_close.addEventListener('click', () => {
 })
 // header_menu
 
+// select
+const customSelect = document.getElementById("customSelect");
+const selectedOption = customSelect.querySelector(".selected");
+const optionsContainer = customSelect.querySelector(".select-options");
+const options = optionsContainer.querySelectorAll(".option");
+const icon = customSelect.querySelector(".icon");
+
+customSelect.addEventListener("click", (e) => {
+  e.stopPropagation();
+  optionsContainer.style.display = optionsContainer.style.display === "flex" ? "none" : "flex";
+  icon.style.transform = optionsContainer.style.display === "block" ? "rotate(180deg)" : "rotate(0deg)";
+});
+
+options.forEach(option => {
+  option.addEventListener("click", (e) => {
+    e.stopPropagation();
+    selectedOption.firstChild.textContent = option.textContent;
+    optionsContainer.style.display = "none";
+    icon.style.transform = "rotate(0deg)";
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!customSelect.contains(e.target)) {
+    optionsContainer.style.display = "none";
+    icon.style.transform = "rotate(0deg)";
+  }
+});
+
+// select
+
 // header_scroll
 const header = document.querySelector(".page-header");
 const headerBottom = document.querySelector(".header_bottom");
