@@ -27,31 +27,50 @@ catalog_close.addEventListener('click', () => {
 // header_menu
 
 // select
-const customSelect = document.getElementById("customSelect");
-const selectedOption = customSelect.querySelector(".selected");
-const optionsContainer = customSelect.querySelector(".select-options");
-const options = optionsContainer.querySelectorAll(".option");
-const icon = customSelect.querySelector(".icon");
+document.addEventListener("DOMContentLoaded", () => {
+  const customSelect = document.getElementById("customSelect");
 
-customSelect.addEventListener("click", (e) => {
-  e.stopPropagation();
-  optionsContainer.style.display = optionsContainer.style.display === "flex" ? "none" : "flex";
-  icon.style.transform = optionsContainer.style.display === "block" ? "rotate(180deg)" : "rotate(0deg)";
-});
+  if (customSelect) {
+    const selectedOption = customSelect.querySelector(".selected");
+    const optionsContainer = customSelect.querySelector(".select-options");
+    const options = optionsContainer.querySelectorAll(".option");
+    const icon = customSelect.querySelector(".icon");
 
-options.forEach(option => {
-  option.addEventListener("click", (e) => {
-    e.stopPropagation();
-    selectedOption.firstChild.textContent = option.textContent;
-    optionsContainer.style.display = "none";
-    icon.style.transform = "rotate(0deg)";
-  });
-});
+    customSelect.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (optionsContainer) {
+        optionsContainer.style.display = optionsContainer.style.display === "flex" ? "none" : "flex";
+        if (icon) {
+          icon.style.transform = optionsContainer.style.display === "flex" ? "rotate(180deg)" : "rotate(0deg)";
+        }
+      }
+    });
 
-document.addEventListener("click", (e) => {
-  if (!customSelect.contains(e.target)) {
-    optionsContainer.style.display = "none";
-    icon.style.transform = "rotate(0deg)";
+    options.forEach(option => {
+      option.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (selectedOption) {
+          selectedOption.firstChild.textContent = option.textContent;
+        }
+        if (optionsContainer) {
+          optionsContainer.style.display = "none";
+        }
+        if (icon) {
+          icon.style.transform = "rotate(0deg)";
+        }
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!customSelect.contains(e.target)) {
+        if (optionsContainer) {
+          optionsContainer.style.display = "none";
+        }
+        if (icon) {
+          icon.style.transform = "rotate(0deg)";
+        }
+      }
+    });
   }
 });
 
