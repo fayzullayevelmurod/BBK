@@ -58,45 +58,52 @@ document.addEventListener("click", (e) => {
 // select
 
 // header_scroll
-const header = document.querySelector(".page-header");
-const headerBottom = document.querySelector(".header_bottom");
-const toggleClass = "is-sticky";
-const menuBtn = document.querySelector(".menu_btn");
-const leftCatalog = document.querySelector(".catalog_absolute_left");
-const rightCatalog = document.querySelector(".catalog_absolute_right");
+// Header behavior function
+function initHeaderBehavior() {
+  const header = document.querySelector(".page-header");
+  const headerBottom = document.querySelector(".header_bottom");
+  const toggleClass = "is-sticky";
+  const menuBtn = document.querySelector(".menu_btn");
+  const leftCatalog = document.querySelector(".catalog_absolute_left");
+  const rightCatalog = document.querySelector(".catalog_absolute_right");
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  const screenWidth = window.innerWidth;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 1250) {
-    if (currentScroll > 60) {
-      header.classList.add(toggleClass);
-      menuBtn.classList.add('active');
-      leftCatalog.classList.add('active');
-      rightCatalog.classList.add('active');
+    if (screenWidth <= 1250) {
+      if (currentScroll > 60) {
+        header.classList.add(toggleClass);
+        menuBtn.classList.add('active');
+        leftCatalog.classList.add('active');
+        rightCatalog.classList.add('active');
+        headerBottom.style.display = "none";
+      } else {
+        header.classList.remove(toggleClass);
+        menuBtn.classList.remove('active');
+        headerBottom.style.display = "none";
+        leftCatalog.classList.remove('active');
+        rightCatalog.classList.remove('active');
+      }
     } else {
-      header.classList.remove(toggleClass);
-      menuBtn.classList.remove('active');
-      headerBottom.style.display = "none";
-      leftCatalog.classList.remove('active');
-      rightCatalog.classList.remove('active');
+      if (currentScroll > 200) {
+        header.classList.add(toggleClass);
+        menuBtn.classList.add('active');
+        leftCatalog.classList.add('active');
+        rightCatalog.classList.add('active');
+        // headerBottom.style.display = "block";
+      } else {
+        header.classList.remove(toggleClass);
+        menuBtn.classList.remove('active');
+        leftCatalog.classList.remove('active');
+        rightCatalog.classList.remove('active');
+        // headerBottom.style.display = "block";
+      }
     }
-  } else {
-    if (currentScroll > 200) {
-      header.classList.add(toggleClass);
-      menuBtn.classList.add('active');
-      leftCatalog.classList.add('active');
-      rightCatalog.classList.add('active');
-    } else {
-      header.classList.remove(toggleClass);
-      menuBtn.classList.remove('active');
-      leftCatalog.classList.remove('active');
-      rightCatalog.classList.remove('active');
-    }
-  }
-});
+  });
+}
 
+document.addEventListener("DOMContentLoaded", initHeaderBehavior);
 
 // header_scroll
 
