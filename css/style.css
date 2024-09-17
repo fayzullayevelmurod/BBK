@@ -2477,6 +2477,18 @@ address {
   }
 }
 
+.portfolio_left {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio_left a {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F4F4F4;
+}
+
 .footer {
   background-color: #003064;
 }

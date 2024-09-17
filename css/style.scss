@@ -2741,6 +2741,23 @@ address {
 }
 // download_catalog
 
+// portfolio_left
+.portfolio {
+    &_left {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        
+        a {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: $color-bg-grey;
+        }
+    }
+}
+// portfolio_left
+
 // footer
 .footer {
     background-color: $color-main-blue;
