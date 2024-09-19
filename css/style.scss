@@ -2757,7 +2757,9 @@ address {
     }
 
     &_cards {
-
+        gap: 40px 0;
+        display: flex;
+        flex-direction: column;
     }
 
     &_card {
@@ -2769,14 +2771,14 @@ address {
             font-family: $font-stapel;
             font-size: 25px;
             font-weight: 400;
-            line-height: 35px;
+            line-height: 25px;
             color: $color-black;
         }
 
         h6 {
             font-size: 18px;
             font-weight: 600;
-            line-height: 25.2px;
+            line-height: 15px;
             color: $color-black;
             margin: 40px 0 30px 0;
         }
@@ -2788,7 +2790,7 @@ address {
         gap: 20px;
 
         li {
-            padding: 16px 24px;
+            padding: 15px 24px;
             border-radius: 10px;
             background-color: $color-white;
             @include flex-center();
@@ -2804,7 +2806,7 @@ address {
         h6 {
             font-size: 16px;
             font-weight: 700;
-            line-height: 24px;
+            line-height: 20px;
             color: $color-black;
             margin: 0 0 15px 0;
 
@@ -2813,14 +2815,75 @@ address {
         p {
             font-size: 16px;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 20px;
             color: $color-black;
         }
 
         .btn_blue {
+            margin-left: auto;
             padding: 10px;
             width: 50px;
             height: 50px;
+        }
+    }
+
+    .portfolioSwiper2 {
+        border-radius: 20px;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        // .swiper-slide-active {
+        //     border: 2px solid $color-main-blue;
+        // }
+    }
+
+    .portfolioSwiper {
+        .swiper-slide {
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .slider_link {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        h6 {
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16.8px;
+            color: $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &_block {
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.2);
         }
     }
 }

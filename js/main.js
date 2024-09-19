@@ -214,6 +214,26 @@ let product_slider = new Swiper(".productSlider", {
 });
 // product_slider
 
+// portfolio
+document.querySelectorAll(".portfolioSwiper").forEach((element, index) => {
+  let swiperThumbs = new Swiper(element, {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  let mainSwiper = document.querySelectorAll(".portfolioSwiper2")[index];
+  new Swiper(mainSwiper, {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: swiperThumbs,
+    },
+  });
+});
+
+// portfolio
+
 
 // footer
 document.addEventListener('DOMContentLoaded', () => {
