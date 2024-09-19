@@ -2488,15 +2488,63 @@ address {
   border-radius: 5px;
   background-color: #F4F4F4;
 }
+.portfolio_left_media {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.portfolio_left_media a {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #F4F4F4;
+}
 .portfolio_cards {
   gap: 40px 0;
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 991px) {
+  .portfolio_cards {
+    gap: 20px 0;
+  }
+}
+.portfolio_cards_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.portfolio_cards_pagination li.active {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 35px;
+  color: #003064;
+}
+.portfolio_cards_pagination li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21.86px;
+  color: #999999;
+}
+.portfolio_cards .prev_btn {
+  margin-right: 10px;
+}
+.portfolio_cards .next_btn {
+  margin-left: 10px;
+}
 .portfolio_card {
   padding: 40px;
   border-radius: 20px;
   background-color: #F8FAFD;
+}
+@media screen and (max-width: 991px) {
+  .portfolio_card {
+    padding: 20px 15px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .portfolio_card h4 {
   font-family: "Stapel", sans-serif;
@@ -2505,12 +2553,30 @@ address {
   line-height: 25px;
   color: #222222;
 }
+@media screen and (max-width: 991px) {
+  .portfolio_card h4 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 .portfolio_card h6 {
   font-size: 18px;
   font-weight: 600;
   line-height: 15px;
   color: #222222;
   margin: 40px 0 30px 0;
+}
+@media screen and (max-width: 991px) {
+  .portfolio_card h6 {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 40px 0 20px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .portfolio .col-xl-6 {
+    padding: 0;
+  }
 }
 .portfolio_card_list {
   display: flex;
@@ -2525,6 +2591,11 @@ address {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 991px) {
+  .portfolio_card_list li {
+    padding: 10px 13px;
+  }
+}
 .portfolio_card_list img {
   width: 73px;
   height: 65px;
@@ -2537,11 +2608,23 @@ address {
   color: #222222;
   margin: 0 0 15px 0;
 }
+@media screen and (max-width: 991px) {
+  .portfolio_card_list h6 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
 .portfolio_card_list p {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   color: #222222;
+}
+@media screen and (max-width: 991px) {
+  .portfolio_card_list p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .portfolio_card_list .btn_blue {
   margin-left: auto;
@@ -2549,14 +2632,31 @@ address {
   width: 50px;
   height: 50px;
 }
+@media screen and (max-width: 991px) {
+  .portfolio_card_list .btn_blue {
+    width: 40px;
+    height: 40px;
+  }
+}
 .portfolio .portfolioSwiper2 {
   border-radius: 20px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 991px) {
+  .portfolio .portfolioSwiper2 {
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
 }
 .portfolio .portfolioSwiper2 img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+}
+@media screen and (max-width: 991px) {
+  .portfolio .portfolioSwiper2 img {
+    border-radius: 10px;
+  }
 }
 .portfolio .portfolioSwiper .swiper-slide {
   border-radius: 5px;

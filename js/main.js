@@ -218,9 +218,14 @@ let product_slider = new Swiper(".productSlider", {
 document.querySelectorAll(".portfolioSwiper").forEach((element, index) => {
   let swiperThumbs = new Swiper(element, {
     spaceBetween: 10,
-    slidesPerView: 5,
+    slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
+    breakpoints: {
+      991: {
+        slidesPerView: 5,
+      },
+    },
   });
 
   let mainSwiper = document.querySelectorAll(".portfolioSwiper2")[index];
