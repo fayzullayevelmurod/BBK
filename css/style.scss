@@ -2760,7 +2760,7 @@ address {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        
+
         a {
             width: 100%;
             padding: 10px;
@@ -2932,9 +2932,6 @@ address {
             }
         }
 
-        // .swiper-slide-active {
-        //     border: 2px solid $color-main-blue;
-        // }
     }
 
     .portfolioSwiper {
@@ -2947,6 +2944,10 @@ address {
             width: 100%;
             height: 100%;
             border-radius: 5px;
+        }
+
+        .swiper-slide-thumb-active {
+            border: 2px solid $color-main-blue;
         }
     }
 

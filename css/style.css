@@ -2667,6 +2667,9 @@ address {
   height: 100%;
   border-radius: 5px;
 }
+.portfolio .portfolioSwiper .swiper-slide-thumb-active {
+  border: 2px solid #003064;
+}
 .portfolio .slider_link {
   position: relative;
   width: 100%;
