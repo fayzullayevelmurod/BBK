@@ -237,6 +237,44 @@ document.querySelectorAll(".portfolioSwiper").forEach((element, index) => {
   });
 });
 
+let swiper = new Swiper(".portfolio_endSwiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".portfolio-button-next",
+    prevEl: ".portfolio-button-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    991: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+    },
+  },
+});
+
+let swiper2 = new Swiper(".portfolio_patterns", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".patterns-button-next",
+    prevEl: ".patterns-button-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    991: {
+      spaceBetween: 20,
+      slidesPerView: 4,
+    },
+  },
+});
+
 // portfolio
 
 
