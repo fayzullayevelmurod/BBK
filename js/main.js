@@ -215,13 +215,14 @@ let product_slider = new Swiper(".productSlider", {
 
 document.querySelectorAll(".productCard").forEach((element, index) => {
   let swiper = new Swiper(element, {
-    spaceBetween: 15,
+    spaceBetween: 5,
     slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
     direction: "horizontal",
     breakpoints: {
       991: {
+        spaceBetween: 15,
         direction: 'vertical',
       }
     }

@@ -2809,6 +2809,8 @@ address {
 }
 .product_card_left .productCard2 img {
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 991px) {
   .product_card_left .productCard2 img {
@@ -2821,7 +2823,18 @@ address {
 }
 @media screen and (max-width: 991px) {
   .product_card_left .productCard {
-    min-width: 100%;
+    width: 100%;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product_card_left .productCard {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .product_card_left .productCard {
+    height: 71px;
   }
 }
 .product_card_left .productCard .swiper-slide {
