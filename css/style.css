@@ -2709,6 +2709,15 @@ address {
   color: #222222;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 991px) {
+  .product_card h4 {
+    font-family: "Stapel", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    margin-bottom: 20px;
+  }
+}
 .product_card .one_title {
   margin-bottom: 20px;
 }
@@ -2826,18 +2835,158 @@ address {
   gap: 20px;
   margin: 80px 0;
 }
+@media screen and (max-width: 991px) {
+  .product_card .technical_btns {
+    margin: 40px 0;
+    gap: 10px;
+    flex-direction: column;
+  }
+}
 .product_card .technical_btns button {
   height: 60px;
   flex: 1;
 }
+@media screen and (max-width: 991px) {
+  .product_card .technical_btns button {
+    height: 50px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .technical_btns .btn_blue svg {
+    width: 30px;
+  }
+}
 .product_card .technical_btns .btn_white {
   border: 1px solid #003064;
+}
+@media screen and (max-width: 991px) {
+  .product_card .technical_btns .btn_white {
+    height: 50px;
+    padding: 12.5px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .technical_btns .btn_white svg {
+    width: 20px;
+  }
 }
 .product_card .product_card_end {
   background-color: #F4F4F4;
 }
+.product_card .calculate {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate {
+    margin-bottom: 40px;
+  }
+}
+.product_card .calculate_text {
+  display: flex;
+  align-items: start;
+  gap: 40px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 60px 40px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate_text {
+    border-radius: 10px;
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate_left {
+    display: none;
+  }
+}
+.product_card .calculate h5 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 28px;
+  color: #003064;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+}
+.product_card .calculate h5 img {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate h5 img {
+    display: flex;
+    width: 26px;
+    height: 29px;
+    flex-shrink: 0;
+  }
+}
+.product_card .calculate p {
+  margin: 20px 0 40px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: #999999;
+  max-width: 398px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+.product_card .calculate .btn_blue {
+  max-width: 200px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate .btn_blue {
+    max-width: 180px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .calculate .btn_blue svg {
+    width: 30px;
+  }
+}
 .product_card .planner {
   padding-bottom: 80px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner {
+    padding-bottom: 40px;
+  }
+}
+.product_card .planner h6 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #222222;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner h6 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.product_card .planner span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #999999;
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner span {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 .product_card .planner ul {
   border-radius: 20px;
@@ -2847,24 +2996,63 @@ address {
   flex-direction: column;
   gap: 40px;
 }
+@media screen and (max-width: 991px) {
+  .product_card .planner ul {
+    padding: 30px 15px;
+    gap: 30px;
+    border-radius: 10px;
+  }
+}
 .product_card .planner_left {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner_left {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner_left img {
+    width: 39px;
+  }
 }
 .product_card .planner li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 991px) {
+  .product_card .planner .btn_blue span {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .product_card .planner .btn_blue {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+}
 .product_card .portfolio_patterns {
   padding: 80px 0;
+}
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_patterns {
+    padding: 40px 0;
+  }
 }
 .product_card .portfolio_patterns .portfolio_head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_patterns .portfolio_head {
+    margin-bottom: 20px;
+  }
 }
 .product_card .portfolio_patterns h4 {
   margin-bottom: 0;
@@ -2874,12 +3062,22 @@ address {
   align-items: center;
   gap: 10px;
 }
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_patterns .slide_btns svg {
+    width: 20px;
+  }
+}
 .product_card .portfolio_patterns .portfolio_block {
   border-radius: 20px;
   position: relative;
   padding: 20px;
   background-color: #FFFFFF;
   overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_patterns .portfolio_block {
+    border-radius: 10px;
+  }
 }
 .product_card .portfolio_patterns .portfolio_block img {
   border-radius: 10px;
@@ -2909,11 +3107,22 @@ address {
   margin-top: 80px;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_endSwiper {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+}
 .product_card .portfolio_endSwiper .portfolio_head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_endSwiper .portfolio_head {
+    margin-bottom: 20px;
+  }
 }
 .product_card .portfolio_endSwiper h4 {
   margin-bottom: 0;
@@ -2952,6 +3161,18 @@ address {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  .product_card .portfolio_endSwiper a {
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 12.8px;
+    letter-spacing: 0.05em;
+    gap: 5px;
+  }
+  .product_card .portfolio_endSwiper a svg {
+    width: 20px;
+  }
 }
 
 .footer {
