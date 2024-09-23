@@ -2988,6 +2988,155 @@ address {
 // product_card
 .product_card {
 
+    .product_card_tabs {
+        .nav-tabs {
+            display: flex;
+            border-bottom: 1px solid $color-grey;
+            margin-bottom: 80px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+            @include media(991) {
+                margin-bottom: 40px;
+            }
+
+            @include media(768) {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            white-space: nowrap;
+            flex: 1;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 18px;
+            color: $color-black;
+            text-transform: uppercase;
+            padding: 30px;
+            border: none;
+
+            @include media(1220) {
+                padding: 20px;
+            }
+
+            @include media(991) {
+                padding: 20px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        .nav-link.active {
+            font-weight: 700;
+            color: $color-main-blue;
+            border-bottom: 2px solid $color-main-blue;
+        }
+    }
+
+    .product_card_content {
+        margin-bottom: 80px;
+
+        @include media(991) {
+            margin-bottom: 40px;
+        }
+
+        h6 {
+            font-family: $font-stapel;
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 35px;
+            color: $color-black;
+
+            @include media(991) {
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+
+        p {
+            margin-top: 40px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25.6px;
+            color: #555555;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 22.4px;
+            }
+        }
+    }
+
+    &_left {
+        display: flex;
+        align-items: start;
+        flex-direction: row-reverse;
+        gap: 15px;
+
+        @include media(991) {
+            margin-bottom: 40px;
+            flex-direction: column;
+        }
+
+        .productCard2 {
+            width: 100%;
+
+            .swiper-slide {
+                border-radius: 20px;
+
+                @include media(991) {
+                    border-radius: 10px;
+                }
+            }
+
+            img {
+                border-radius: 20px;
+
+                @include media(991) {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .productCard {
+            width: 95px;
+            height: 355px;
+
+            @include media(991) {
+                min-width: 100%;
+            }
+
+            .swiper-slide {
+                margin-right: 0;
+                padding: 5px;
+                border-radius: 5px;
+                margin: 0;
+                border: 2px solid transparent;
+
+                @include media(991) {
+                    flex-shrink: 0;
+                }
+            }
+
+            .swiper-slide-thumb-active {
+                border: 2px solid $color-main-blue;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+
     h4 {
         font-family: $font-stapel;
         font-size: 25px;
@@ -3012,16 +3161,38 @@ address {
     .icons {
         @include flex-center();
         gap: 10px;
+
+        svg {
+            width: 49px;
+            height: 49px;
+
+            @include media(991) {
+                width: 43px;
+                height: 43px;
+            }
+        }
+
+        @include media(991) {
+            gap: 5px;
+        }
     }
 
     .settings {
         margin: 80px 0;
+
+        @include media(991) {
+            margin: 40px 0;
+        }
     }
 
     .settings_blocks {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include media(991) {
+            gap: 10px;
+        }
     }
 
     .settings_block {
@@ -3029,9 +3200,25 @@ address {
         border-radius: 20px;
         background-color: $color-light-blue;
 
+        @include media(991) {
+
+        }
+
         ul {
             @include flex-center();
             gap: 80px;
+
+            @include media(991) {
+                flex-direction: column;
+                align-items: start;
+                gap: 40px;
+            }
+
+            li {
+                svg {
+                    flex-shrink: 0;
+                }
+            }
         }
 
         h6 {
@@ -3041,6 +3228,11 @@ address {
             color: $color-grey;
             @include flex-center();
             gap: 10px;
+
+            @include media(991) {
+                font-size: 14px;
+                line-height: 19px;
+            }
         }
 
         span {
@@ -3055,6 +3247,19 @@ address {
             border: 2px solid $color-main-blue;
             border-radius: 5px;
             padding: 7px;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 16px;
+                width: 53px;
+                height: 39px;
+            }
+
+            img {
+                @include media(991) {
+                    padding: 5px;
+                }
+            }
         }
 
         .buttons {
@@ -3069,11 +3274,19 @@ address {
             gap: 10px;
             margin-top: 20px;
 
+            @include media(991) {
+                gap: 5px;
+            }
+
             .color {
                 width: calc(100% / 4 - 8px);
                 padding: 5px;
                 border-radius: 10px;
                 border: 2px solid transparent;
+
+                @include media(991) {
+                    width: calc(100% / 3 - 4px);
+                }
 
                 img {
                     width: 100%;
@@ -3101,6 +3314,10 @@ address {
             justify-content: space-between;
             gap: 20px;
 
+            @include media(991) {
+                gap: 10px;
+            }
+
             svg {
                 flex-shrink: 0;
             }
@@ -3119,6 +3336,12 @@ address {
             @include flex-center();
             gap: 15px;
             min-width: max-content;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 16px;
+                gap: 10px;
+            }
         }
 
         h6 {
@@ -3126,6 +3349,11 @@ address {
             font-weight: 600;
             line-height: 24px;
             color: $color-black;
+
+            @include media(991) {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
 
         &_btns {

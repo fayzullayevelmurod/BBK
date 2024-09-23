@@ -212,6 +212,31 @@ let product_slider = new Swiper(".productSlider", {
     el: ".swiper-pagination",
   },
 });
+
+document.querySelectorAll(".productCard").forEach((element, index) => {
+  let swiper = new Swiper(element, {
+    spaceBetween: 15,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    direction: "horizontal",
+    breakpoints: {
+      991: {
+        direction: 'vertical',
+      }
+    }
+  });
+
+  let relatedElement = document.querySelectorAll(".productCard2")[index];
+  if (relatedElement) {
+    new Swiper(relatedElement, {
+      effect: "fade",
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  }
+});
 // product_slider
 
 // portfolio
