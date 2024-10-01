@@ -2989,6 +2989,15 @@ address {
 .product_card {
 
     .product_card_tabs {
+        position: sticky;
+        background-color: $color-white;
+        top: 114px;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &.sticky-shadow {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         .nav-tabs {
             display: flex;
             border-bottom: 1px solid $color-grey;
@@ -3570,6 +3579,7 @@ address {
 
         .btn_blue {
             span {
+                color: $color-white;
                 @include media(991) {
                     display: none;
                 }

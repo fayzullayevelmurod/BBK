@@ -2701,6 +2701,15 @@ address {
   background: rgba(0, 0, 0, 0.2);
 }
 
+.product_card .product_card_tabs {
+  position: sticky;
+  background-color: #FFFFFF;
+  top: 114px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.product_card .product_card_tabs.sticky-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .product_card .product_card_tabs .nav-tabs {
   display: flex;
   border-bottom: 1px solid #999999;
@@ -3262,6 +3271,9 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.product_card .planner .btn_blue span {
+  color: #FFFFFF;
 }
 @media screen and (max-width: 991px) {
   .product_card .planner .btn_blue span {

@@ -238,6 +238,7 @@ document.querySelectorAll(".productCard").forEach((element, index) => {
     });
   }
 });
+
 // product_slider
 
 // portfolio
