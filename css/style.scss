@@ -1172,28 +1172,26 @@ address {
         }
     }
 
-    .home-button-prev {
-        left: 15%;
+    .container {
+        position: relative;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 4;
 
-        @include media(1650) {
-            left: 5%;
-        }
-
-        @include media(991) {
-            right: 70px;
+        @include media(1399) {
+            max-width: 100%;
         }
     }
 
+    .home-button-prev {
+        left: 20px;
+    }
+
     .home-button-next {
-        right: 15%;
-
-        @include media(1650) {
-            right: 5%;
-        }
-
-        @include media(991) {
-            right: 15px;
-        }
+        right: 20px;
     }
 
     .media_slider_btn {
@@ -3868,5 +3866,3 @@ address {
     }
 }
 // footer
-
-
